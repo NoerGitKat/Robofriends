@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../components/Card";
 import { robots } from "../sources/robotsInfo";
+import "../styles/Global.scss";
 
 class CardContainer extends React.Component {
   constructor(props) {
@@ -8,7 +9,11 @@ class CardContainer extends React.Component {
   }
 
   render() {
-    return robots.map((robot, i) => <Card key={`robot${i}`} robot={robot} />);
+    return (
+      <div id="allcards-container">
+        {robots.map((robot, i) => <Card key={`robot${i}`} robot={robot} />)}
+      </div>
+    );
   }
 }
 

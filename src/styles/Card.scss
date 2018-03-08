@@ -1,0 +1,28 @@
+body {
+  background-color: lightgreen;
+}
+
+.card-container {
+  background-color: rgba(12, 145, 40, 0.5);
+  margin: 1em;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.5s ease;
+  box-shadow: 3px 3px 0 0 #006400;
+
+  p {
+    margin: 1em auto;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(12, 145, 40, 0.9);
+  }
+
+  img {
+    padding: 1em;
+  }
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px #006400;
+}

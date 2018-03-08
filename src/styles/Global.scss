@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Sega";
+  src: url("./../sources/fonts/SEGA.woff") format("woff");
+}
+
+#robofriends-container {
+  text-align: center;
+  h1 {
+    font-family: Sega;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0.4em;
+  }
+}
