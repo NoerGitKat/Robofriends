@@ -16,6 +16,16 @@ class AppContainer extends React.Component {
     this.onSearchChange = this.onSearchChange.bind(this);
   }
 
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response => {
+        return response.json();
+      })
+      .then(users => {
+        this.setState({ robots: users });
+      });
+  }
+
   onSearchChange(event) {
     this.setState({
       searchVal: event.target.value
@@ -28,6 +38,9 @@ class AppContainer extends React.Component {
         .toLowerCase()
         .includes(this.state.searchVal.toLowerCase());
     });
+    if (this.state.robots.length === 0) {
+      return <h1>Loading...</h1>;
+    }
     return (
       <div id="robofriends-container">
         <h1>Robofriends</h1>
