@@ -3,7 +3,7 @@ import "../styles/Card.scss";
 
 const Card = ({ robot }) => {
   return (
-    <div class="card-container">
+    <div className="card-container">
       <img src={`https://robohash.org/${robot.id}.png`} alt="robotFace" />
       <p>{robot.name}</p>
     </div>
